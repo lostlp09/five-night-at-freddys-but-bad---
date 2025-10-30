@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dokdfj7dw6okq"]
+
+[ext_resource type="PackedScene" uid="uid://dw74d7vcus6rg" path="res://textures/FNaF Table.fbx" id="1_buj8v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_su0eo"]
+size = Vector3(3.4317, 2.40625, 5.27306)
+
+[node name="FNaF Table" instance=ExtResource("1_buj8v")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0948181, 1.24023, 0.0702324)
+shape = SubResource("BoxShape3D_su0eo")

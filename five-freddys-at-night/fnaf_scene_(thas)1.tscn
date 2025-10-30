@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c71l6dgotdmiq"]
+
+[node name="fnaf scene (thas)"]
+
+[node name="Точечный источник" parent="." index="16"]
+visible = false
+
+[node name="Точечный источник_001" parent="." index="17"]
+visible = false
+
+[node name="Точечный источник_002" parent="." index="18"]
+visible = false
