@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ein22tr4osnp"]
+
+[ext_resource type="PackedScene" uid="uid://cfmi5uf5wwd82" path="res://fnaf-table/FNaF Chair.fbx" id="1_xif8w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1e34w"]
+size = Vector3(2.6228027, 5.2280273, 2.0894165)
+
+[node name="FNaF Chair" instance=ExtResource("1_xif8w")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.052612305, 2.1140137, 0.09310913)
+shape = SubResource("BoxShape3D_1e34w")

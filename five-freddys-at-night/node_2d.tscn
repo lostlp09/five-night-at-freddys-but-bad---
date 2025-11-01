@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqj4umw17776k"]
+
+[ext_resource type="Script" uid="uid://ccc66bh40mog6" path="res://progress_bar.gd" id="1_wtcfe"]
+
+[sub_resource type="Theme" id="Theme_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0, 0.85770965, 0, 1)
+offset_left = 50.0
+offset_top = 141.0
+offset_right = 280.0
+offset_bottom = 156.0
+theme = SubResource("Theme_wtcfe")
+value = 100.0
+show_percentage = false
+script = ExtResource("1_wtcfe")

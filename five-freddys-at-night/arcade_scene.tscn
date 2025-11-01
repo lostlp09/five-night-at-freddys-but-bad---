@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://beu45y76lnvw8"]
+
+[ext_resource type="PackedScene" uid="uid://dfma6ivkeugji" path="res://arcade_cabinet.glb" id="1_oiq33"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_75uiw"]
+size = Vector3(0.83291626, 2.0390472, 0.9176636)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_oiq33")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009536743, 0.07318878, -0.029754639)
+shape = SubResource("BoxShape3D_75uiw")
