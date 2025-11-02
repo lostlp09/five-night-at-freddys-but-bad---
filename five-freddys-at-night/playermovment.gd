@@ -10,6 +10,7 @@ var isrecharging = false
 @onready var flashlight =$Camera3D/SpotLight3D
 @onready var camera = $Camera3D
 func _ready() -> void:
+	sprintvalue.sprintvalue = 100
 	sprintcooldown.connect(oncooldown)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 func _input(event: InputEvent) -> void:
@@ -24,7 +25,7 @@ func _input(event: InputEvent) -> void:
 		
 
 func _physics_process(delta: float) -> void:
-	print(sprintvalue.sprintvalue)
+
 	var rotation1 = self.rotation
 	
 	var movment1 = Vector3(0,self.velocity.y,0)
@@ -52,8 +53,8 @@ func _physics_process(delta: float) -> void:
 		if sprintvalue.sprintvalue - 1 >= 0:
 			
 			sprint += delta
-			movment1.x *= 2
-			movment1.z *= 2
+			movment1.x *= 2.5
+			movment1.z *= 2.5
 			if sprint >= 0.05:
 				sprintvalue.sprintvalue -=1
 				sprint = 0
@@ -82,3 +83,13 @@ func oncooldown():
 
 		await get_tree().create_timer(0.1).timeout
 	isrecharging = false
+
+
+
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	if area == $"../../../../Freddy/kill":
+		
+		get_tree().change_scene_to_file("res://death.tscn")
+	else:
+		print("cap")

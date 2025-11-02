@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://co3jtfcatp6xt"]
+
+[ext_resource type="PackedScene" uid="uid://cab72qtwxdyd5" path="res://big_old_rusted_oven.glb" id="1_kn82n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hate5"]
+size = Vector3(1.966919, 1.3063354, 1.8188629)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_kn82n")]
+
+[node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Big oven_002_31" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02174449, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, -5.054406, 0.9394913, -8.472929)
+shape = SubResource("BoxShape3D_hate5")

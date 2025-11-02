@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c77uet805mfwl"]
+
+[ext_resource type="PackedScene" uid="uid://gamydp6k8xud" path="res://warehouse_shelving_unit.glb" id="1_wxe3g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s14ew"]
+size = Vector3(33.492737, 92.19769, 134.52924)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_wxe3g")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.02359, -3.7015686, 66.76462)
+shape = SubResource("BoxShape3D_s14ew")

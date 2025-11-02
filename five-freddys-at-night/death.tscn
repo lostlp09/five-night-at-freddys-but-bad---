@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://drak8j2hj8uh8"]
+
+[ext_resource type="Script" uid="uid://brcemrtqmld13" path="res://death.gd" id="1_lf77f"]
+[ext_resource type="VideoStream" uid="uid://dbf70a31enbac" path="res://1102.ogv" id="1_qemge"]
+
+[node name="Death" type="Node2D"]
+script = ExtResource("1_lf77f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(160, 91)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_top = 1.0
+offset_right = 1280.0
+offset_bottom = 721.0
+scale = Vector2(0.25, 0.25)
+stream = ExtResource("1_qemge")
+autoplay = true
